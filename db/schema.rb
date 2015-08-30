@@ -108,16 +108,6 @@ ActiveRecord::Schema.define(version: 20150824203305) do
 
   add_index "post_parrafo_bullets", ["post_parrafo_id"], name: "index_post_parrafo_bullets_on_post_parrafo_id", using: :btree
 
-  create_table "post_parrafo_vineta", force: :cascade do |t|
-    t.string   "ppv_titulo",     limit: 255
-    t.text     "ppv_texto",      limit: 65535
-    t.integer  "postparrafo_id", limit: 4
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
-  add_index "post_parrafo_vineta", ["postparrafo_id"], name: "index_post_parrafo_vineta_on_postparrafo_id", using: :btree
-
   create_table "post_parrafos", force: :cascade do |t|
     t.string   "par_titulo",                limit: 255
     t.text     "par_texto",                 limit: 65535

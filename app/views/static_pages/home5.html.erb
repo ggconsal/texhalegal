@@ -1,0 +1,105 @@
+<section id="about">
+  <div class="container">
+    <div class="col-xs-12 div-img-40 div-hori sin-padd-r" >
+      <%= image_tag "home01-tit-dh.jpg", class: "img-responsive img-ppal"%>
+    </div>
+
+    <div class="col-xs-12 div-img-25 div-vert sin-padd-r margen-menu" >
+      <%= image_tag "home01-tit-dv.jpg", class: "img-responsive img-ppal"%>
+    </div>
+
+    <div class="col-xs-12 centered">
+      <p>
+        <br/><b><u>Dirección</u>:</b> Av. H. Irigoyen 5433. Lanus Oeste. (1832)
+        <br/><b><u>Teléfono</u>:</b> (+5411) 4555-5555 / 5444-4444
+        <br/><b><u>Skype</u>:</b> MiSkype
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-6 col-md-offset-1 hidden-xs centered">
+      <p><br/></p>
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x275&sensor=false&zoom=14&markers=#{-34.705412}%2C#{-58.3917286}" %> 
+      <p><br/><br/><br/><br/><br/></p>
+    </div>
+    <div class="col-xs-12 col-md-6 col-md-offset-1 visible-xs centered">
+      <p><br/></p>
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=300x175&sensor=false&zoom=14&markers=#{-34.705412}%2C#{-58.3917286}" %> 
+    </div>
+    <div class="col-xs-12 col-md-4 col-md-offset-1">
+      <%= form_for(@contact) do |f| %>
+        <% if @contact.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+            <ul>
+            <% @contact.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>
+              Ingrese su Consulta
+            </h2><br/>
+          </div>
+        </div>
+
+        <% @clave = Time.now.year.to_s + Time.now.month.to_s + rand(10000..99999).to_s %>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="field hidden-xs">
+              <%= f.text_field :con_nya, required: true, autofocus: true, :placeholder => "Ingrese su Nombre...", :class=>"form-control" %>
+            </div>
+            <div class="field visible-xs">
+              <%= f.text_field :con_nya, required: true, :placeholder => "Ingrese su Nombre...", :class=>"form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="field">
+              <%= f.email_field :con_mail, :required => true, :placeholder => "Ingrese su email...", :class=>"form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="field">
+              <%= f.text_area :con_obs, :placeholder => "Déjenos su Comentario...", :class=>"form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div id="msgOK">
+        </div>
+
+        <div class="col-xs-12 righter">
+          <div id="divMeAnoto"><br/>
+            <%= f.submit 'Enviar Consulta', :class=>"btn btn-primary btn-md", :id=>"gc-aceptar" %>
+            <p><br/><br/><br/><br/><br/></p>
+         </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="field hide">
+              <%= f.password_field :password, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+            </div>
+            <div class="field hide">
+              <%= f.password_field :password_confirmation, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+            </div>
+            <div class="field hide">
+              <%= f.text_area :con_boton_sitio, :class=>"form-control" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+ 

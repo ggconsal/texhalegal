@@ -18,6 +18,7 @@
 //= require turbolinks
 //= require_self
 
+
 //Load this when the DOM is ready
 $(document).ready(function(){
   // You used .myCarousel here. 
@@ -94,6 +95,21 @@ $(document).ready(function(){
 
 });
 
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&goo' +
+      'callback=initialize';
+  document.body.appendChild(script);
+}
+
+function initialize() {
+    var mapOptions = {
+      zoom: 14,
+      center: new google.maps.LatLng(-34.5969816, -58.3742790)
+    };
+    var map = new google.maps.Map(document.getElementById('templatemo_map'),  mapOptions);
+}
 
 
 /*		$('.div-boton').hide();
