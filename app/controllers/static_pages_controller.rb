@@ -7,6 +7,11 @@ class StaticPagesController < ApplicationController
     #@contact.con_boton_sitio = params[:motivo]
   end
 
+  def home8
+    @contact = Contact.new
+    #@contact.con_boton_sitio = params[:motivo]
+  end
+
   # POST /contacts
   # POST /contacts.json
   def create

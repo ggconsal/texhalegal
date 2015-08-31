@@ -1,0 +1,150 @@
+<div class="col-xs-12 div-img-70 div-hori", id="pp0" >
+  <%= image_tag "home01h.jpg", class: "img-responsive img-ppal"%>
+
+  <div class="col-xs-8 col-xs-offset-2 div-home-text">
+    <div class="col-xs-6">
+      <h1>
+        ENVÍE SU CASO
+      </h1>
+    </div> 
+    <div class="col-xs-4">
+      <h3>
+        Lo evaluaremos Gratis
+      </h3>
+    </div> 
+    <div class="col-xs-2">
+      <h4>
+        <%= link_to "¡Envíe Ahora!", "#", class: "btn btn-info" %>
+      </h4>
+    </div> 
+  </div><br/><br/>
+  <div id="tit00" class="bs-callout bs-callout-info col-md-offset-1 col-md-10 col-xs-12 ventas1 sin-marg-top" >
+    <h4>Nuestra Historia</h4>
+    <p>El Bufete fue creado en 1995, como una firma multidisciplinaria que presta servicios jurídicos principalmente en las áreas del Derecho Civil, Mercantil, Administrativo y Procesal, incluyendo Arbitrajes. Siendo la orientación del despacho fundamentalmente civilista y mercantilista, con el tiempo, y con las nuevas incorporaciones, se ha especializado en múltiples ramas, en función de las necesidades de su clientela.</p>
+    <p>Nos distinguimos por ofrecer al cliente servicios de asesoramiento legal bajo las premisas de excelencia en el servicio, atención inmediata y personalizada, y alto compromiso con los clientes, desarrollando la práctica legal con absoluto respeto a las reglas éticas y deontológicas como profesionales y de honestidad e integridad como personas.</p>
+    <p>El despacho se rige por el principio de voluntad de trabajo, vocación por el derecho e íntegro sentido de la profesión de abogado. Los principios propios del ejercicio de la abogacía y el servicio personalizado a los clientes, junto con el estudio y la formación contínua, orientan la labor de cada día.</p>
+  </div>
+  <div class="col-xs-12 row margen-menu">
+    <div class="col-md-offset-1 col-xs-10 ventas1">
+      <h2>
+        Nuestros Servicios
+      </h2>
+    </div>
+    <div class="col-md-offset-1 col-md-3 col-xs-12 ventas1">
+      <h3><i class="fa fa-check-square-o"></i> Responsabilidad Civil</h3>
+      <p>Le asesoremos y gestionaremos todos los trámites relacionados con indemnización por lesiones, accidentes de tráfico, negligencias médicas, responsabilidad patrimonial de la Administración, reclamar contra compañías de seguros y demás circunstancias que le puedan surgir en el transcurso de su vida.</p>
+      <div class="righter">
+        <%= link_to "Más Información", new_contact_path(:motivo => "txaShop - Mas Información"), remote: true, class: "btn btn-info btn-md" %>
+      </div>
+    </div>
+    <div class="col-md-offset-1 col-md-3 col-xs-12 ventas1">
+      <h3><i class="fa fa-check-square-o"></i> Derecho Laboral</h3>
+      <p>Disponemos en nuestro bufete abogados especializados en reclamar salarios, Incapacidades Permanentes, despidos, acoso laboral, contratos, asesoramiento a empresas y gestorías, recursos contra actas de inspección, accidentes de trabajo y todo lo relacionado con el derecho laboral.</p>
+      <div class="righter">
+        <%= link_to "Más Información", new_contact_path(:motivo => "txaShop - Mas Información"), remote: true, class: "btn btn-info btn-md" %>
+      </div>
+    </div>
+    <div class="col-md-offset-1 col-md-3 col-xs-12 ventas1">
+      <h3><i class="fa fa-check-square-o"></i> Herencias y testamentos</h3>
+      <p>En nuestro bufete de Abogados siempre encontrará un abogado especializado en Redacción de testamentos, particiones de herencias, herencias abintestato, declaración judicial de herederos, liquidación de impuestos y muchas cuestiones más relacionadas con ese delicado momento.</p>
+      <div class="righter">
+        <%= link_to "Más Información", new_contact_path(:motivo => "txaShop - Mas Información"), remote: true, class: "btn btn-info btn-md" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-offset-1 col-xs-10 ventas1">
+    <h2>
+      Nuestra Dirección
+    </h2>
+    <p>
+      <br/><b><u>Dirección</u>:</b> Av. H. Irigoyen 5433. Lanus Oeste. (1832)
+      <br/><b><u>Teléfono</u>:</b> (+5411) 4555-5555 / 5444-4444
+      <br/><b><u>Skype</u>:</b> MiSkype
+    </p>
+  </div>
+  <div class="col-xs-10 col-md-6 col-md-offset-1 hidden-xs centered">
+    <p></p>
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x275&sensor=false&zoom=14&markers=#{-34.705412}%2C#{-58.3917286}" %> 
+    <p><br/><br/><br/><br/><br/></p>
+  </div>
+  <div class="col-xs-12 col-md-6 col-md-offset-1 visible-xs centered">
+    <p></p>
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=300x175&sensor=false&zoom=14&markers=#{-34.705412}%2C#{-58.3917286}" %> 
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <%= form_for(@contact) do |f| %>
+      <% if @contact.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+          <ul>
+          <% @contact.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>
+            Ingrese su Consulta
+          </h2><br/>
+        </div>
+      </div>
+
+      <% @clave = Time.now.year.to_s + Time.now.month.to_s + rand(10000..99999).to_s %>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field hidden-xs">
+            <%= f.text_field :con_nya, required: true, autofocus: true, :placeholder => "Ingrese su Nombre...", :class=>"form-control" %>
+          </div>
+          <div class="field visible-xs">
+            <%= f.text_field :con_nya, required: true, :placeholder => "Ingrese su Nombre...", :class=>"form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.email_field :con_mail, :required => true, :placeholder => "Ingrese su email...", :class=>"form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="field">
+            <%= f.text_area :con_obs, :placeholder => "Déjenos su Comentario...", :class=>"form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <div id="msgOK">
+      </div>
+
+      <div class="col-xs-12 righter">
+        <div id="divMeAnoto"><br/>
+          <%= f.submit 'Enviar Consulta', :class=>"btn btn-primary btn-md", :id=>"gc-aceptar" %>
+          <p><br/><br/><br/><br/><br/></p>
+       </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="field hide">
+            <%= f.password_field :password, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+          </div>
+          <div class="field hide">
+            <%= f.password_field :password_confirmation, :required => true,  :value => @clave, :placeholder => "Ingrese una Clave...", :class=>"form-control" %>
+          </div>
+          <div class="field hide">
+            <%= f.text_area :con_boton_sitio, :class=>"form-control" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

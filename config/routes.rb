@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/home7'
 
+  get 'static_pages/home8'
+
   get 'static_pages/quien'
 
   get 'static_pages/prod'
