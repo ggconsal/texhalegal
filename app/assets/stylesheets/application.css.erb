@@ -66,7 +66,11 @@ body, html, .div-ppal {
 	position: absolute;
 	overflow: hidden;
 	opacity: .6;
+	filter: alpha(opacity=60);
+	-ms-filter: "alpha(opacity=60)";
+	zoom: 1;
 	width: 100%;
+	top: 20%;
 }
 
 .texto-ppal, .texto-ppal3, .texto-ppal4 {
@@ -669,7 +673,7 @@ section .section-heading .divider:after {
 }
 
 
-@media (orientation:portrait) {
+@media (max-width: 650px) {
 	.img-ppal {
 		height: 100%;
 	}
@@ -684,15 +688,15 @@ section .section-heading .divider:after {
 
 	.div-vert {
 		display: inline-block;
-		/*visibility: visible;*/
+		visibility: visible;
 	}
 	.div-hori {
-		/*visibility: hidden;*/
+		visibility: hidden;
 		display: none !important;
 	}
 }
 
-@media (orientation:landscape) {
+@media (min-width: 651px) {
 	.img-ppal {
 		height: 100%;
 	}
@@ -707,10 +711,10 @@ section .section-heading .divider:after {
 
 	.div-hori {
 		display: inline-block;
-		/*visibility: visible;*/
+		visibility: visible;
 	}
 	.div-vert {
-		/*visibility: hidden;*/
+		visibility: hidden;
 		display: none !important;
 	}
 }
