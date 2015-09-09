@@ -11,7 +11,7 @@
  * file per style scope.
  *
  *            You can use Sass (SCSS) here: http://sass-lang.com/
- *= require bootstrap
+ *= require bootstrap-650
  *= require animate
  *= require font-awesome
  *= require_self
@@ -175,8 +175,34 @@ body, html, .div-ppal {
 	width: 80px;
 }
 
+.navbar-right {
+	margin-right: 1%;
+}
+
 .div-ppal {
 	padding: 0px;
+}
+
+.pie-pagina {
+	background-color: #5F5D5D;
+}
+
+.pie-pagina h3, .pie-pagina p {
+	color: white;
+}
+
+.pie-pagina h3 {
+	font-weight: bold;
+}
+
+.logo-redes {
+	float: left;
+	width: 70px;
+	height: 70px;
+}
+
+.logo-redes img {
+	width: 100%;
 }
 
 @media (min-width: 650px) {
@@ -612,6 +638,10 @@ section .section-heading .divider:after {
 	padding-right: 5px;
 }
 
+.sin-padd {
+	padding: 0px;
+}
+
 .margen-menu {
 	margin-top: 50px;
 }
@@ -673,7 +703,7 @@ section .section-heading .divider:after {
 }
 
 
-@media (max-width: 650px) {
+@media (orientation: portrait) {
 	.img-ppal {
 		height: 100%;
 	}
@@ -696,7 +726,7 @@ section .section-heading .divider:after {
 	}
 }
 
-@media (min-width: 651px) {
+@media (orientation: landscape) {
 	.img-ppal {
 		height: 100%;
 	}

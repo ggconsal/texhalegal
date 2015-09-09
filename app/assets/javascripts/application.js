@@ -16,7 +16,6 @@
 //= require spin
 //= require bootstrap
 //= require turbolinks
-//= require respond
 //= require_self
 
 

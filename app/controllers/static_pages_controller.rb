@@ -2,12 +2,12 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def home5
+  def ubicacion
     @contact = Contact.new
     #@contact.con_boton_sitio = params[:motivo]
   end
 
-  def home8
+  def quienes
     @contact = Contact.new
     #@contact.con_boton_sitio = params[:motivo]
   end
