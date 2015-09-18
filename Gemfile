@@ -6,8 +6,11 @@ ruby "2.2.1"
 gem 'rails', '4.2.0'
 
 group :production do
+	# Use mysql as the database for Active Record
+	gem 'mysql2'
+    
 	# Use postgresql as database
-	gem 'pg'
+	#gem 'pg'
 
 	# para heroku, para el tratamiento de los assets
 	gem 'rails_12factor'
