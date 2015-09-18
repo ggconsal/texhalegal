@@ -5,10 +5,10 @@ ruby "2.2.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-group :production do
-	# Use mysql as the database for Active Record
-	gem 'mysql2'
+# Use mysql as the database for Active Record
+gem 'mysql2'
     
+group :production do
 	# Use postgresql as database
 	#gem 'pg'
 
@@ -29,7 +29,7 @@ group :test, :development do
 	gem 'byebug'
 
 	# Use mysql as the database for Active Record
-	gem 'mysql2'
+	#gem 'mysql2'
     
     # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
     gem 'spring'
