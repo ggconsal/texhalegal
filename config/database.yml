@@ -48,9 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   pool: 5
   database: txaLegal_prod
-  username: txaLegal
-  password: <%= ENV['TXABLOG_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['db_pass'] %>

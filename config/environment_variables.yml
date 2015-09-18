@@ -1,0 +1,21 @@
+development:
+  secret_key_base: 8ede4bd6e6796c524f9a289c4f07a7050aeac0e7c3807c3a343144cba81243d8eeeb832a789215546d92795b8621a55ca3876d7b88b15cc7c4763054a55fd490
+
+test:
+  secret_key_base: 638fa7f6fa654375a1f2765540def91819dc61f5a81db790abbdda8b309cc457070d922ac8ac20022a9b475a81ea13a63538525346218132bf1f6e651b317fd5
+
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  ggle_user: "gconsal"
+  ggle_mail: "gconsal@gmail.com"
+  ggle_pass: "sasasa"
+  db_user: "root"
+  db_pass: "pipoto25"
+  txa_mail: "gconsal@texhaarg.com"
+  txa_pass: "Pipoto25"
+
+  # Para saber si estoy en Heroku o no. Por el manejo de imágenes.
+  herokuapp: "NO"
+
+
+SECRET_KEY_BASE: 638fa7f6fa654375a1f2765540def91819dc61f5a81db790abbdda8b309cc457070d922ac8ac20022a9b475a81ea13a63538525346218132bf1f6e651b317fd5
